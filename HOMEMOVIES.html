@@ -5,32 +5,96 @@
     <meta charset="utf-8" />
     <title>WMD Assignment</title>
     <style>
-
-
-
-
-
-
+*{
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background: #101010;
+}
+.nav-bar{
+    position: relative;
+    display: block;
+    background-color: #111111;
+    padding: 10px;
+    overflow: hidden;
+}
+.nav-bar a {
+    position: relative;
+    width: 80px;
+    color:#fff;
+    font-size: 0.7rem;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    z-index: 100;
+}
+.nav-bar b {
+    position: relative;
+    bottom: 40%;
+    transition: 0.3s ease bottom;
+}
+.nav-bar i {
+    position: relative;
+    left: 40px;
+    transition: 0.3s ease left;
+}
+.search-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 60px;
+    background: #353535;
+    line-height: 40px;
+    padding: 10px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+.search-input{
+    background: #353535 ;
+    color: #fff;
+    outline: none;
+    border: none;
+    line-height: 40px;
+    width: 0px;
+    float:left;
+    font: size 1em;
+    transition: 0.7s ease;
+}
+.search-btn{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    background: #353535;
+    padding: 12px;
+    border-radius: 50%;
+    float: right;
+    color: #22ffc0;
+    transition: 0.4s ease;
+}
+.search-box:hover >.search-input,
+.search-input:focus{
+    width: 240px;
+    margin: 0px 8px;
+}
+.search-box:hover >.search-btn,
+.search-input:focus {
+    background: #22ffc0;
+    color: #101010;
+}
     </style>
 </head>
 <body>
-<section>
-    <div>
-        </div>
-    <div>
-    </div>
-    </section>,
-    <section>
-        <div>
-        </div>
-        <div>
-        </div>
-        </section>
-    <section>
-        <div>
-        </div>
-        <div>
-           </div>
-    </section>
+<div class="search-box">
+    <input type="text" placeholder="Search here..."
+    class="search-input"/>
+    <a href="#" class="search-btn">
+        <i class="Fas fa-search"></i>
+    </a>
+</div>
 </body>
 </html>
