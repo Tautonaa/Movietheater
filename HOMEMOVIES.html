@@ -10,7 +10,9 @@
     box-sizing: border-box;
 }
 body{
-    background: #101010;
+    background-image: url('pexels-pixabay-33129.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .nav-bar{
     position: relative;
@@ -40,6 +42,35 @@ body{
     position: relative;
     left: 40px;
     transition: 0.3s ease left;
+}
+.nav-bar span {
+    position: absolute;
+    width: 80px;
+    background-color: #0560FE;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 10px;
+    z-index: 1;
+    transition: 0.3s ease left;
+}
+.nav-bar a :hover b{
+    bottom: 0;
+}
+.nav-bar a :hover i{
+    left: -5px;
+}
+.nav-bar:hover span{
+    background: #0560FE;
+}
+.nav-bar a:nth-child(1):hover ~ span{
+    left: 10px;
+}
+.nav-bar a:nth-child(2):hover ~ span{
+    left: 93px;
+}
+.nav-bar a:nth-child(3):hover ~ span{
+    left: 180px;
 }
 .search-box{
     position: absolute;
@@ -89,6 +120,20 @@ body{
     </style>
 </head>
 <body>
+    <div class="nav-bar">
+    <a href="#"><i class="fas fa-th"></i>
+        <b>contact</b>
+    </a> 
+    <a href="#">
+        <i class="far fa-bookmark"></i>
+        <b>Wishlist</b>
+    </a>
+    <a href="#">
+        <i class="fas fa-id-badge"></i>
+        <b>Tagged</b>
+    </a>
+    <span></span>
+    </div>
 <div class="search-box">
     <input type="text" placeholder="Search here..."
     class="search-input"/>
