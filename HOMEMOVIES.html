@@ -9,68 +9,54 @@
     margin:0;
     box-sizing: border-box;
 }
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--big-color);
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+.logo .bx {
+    font-size: 40px;
+    color: var(--big-color);
+}
+.navbar{
+    display: flex;
+    column-gap: 5rem;
+}
+.navbar li{
+    position: relative;
+}
+.navbar a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--big-color);
+}
+.navbar a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.4s all linear;
+}
+.navbar a:hover::after, 
+.navbar .home-active::after {
+    width: 100%;
+}
+#menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000001;
+    display: none;
+}
 body{
     background-image: url('pexels-pixabay-33129.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-}
-.nav-bar{
-    position: relative;
-    display: block;
-    padding: 10px;
-    overflow: hidden;
-    text-align: center;
-}
-.nav-bar a {
-    position: relative;
-    width: 80px;
-    color:#fff;
-    font-size: 0.7rem;
-    text-align: center;
-    display: inline-block;
-    padding: 10px;
-    box-sizing: border-box;
-    text-decoration: none;
-    z-index: 100;
-}
-.nav-bar b {
-    position: relative;
-    bottom: 40%;
-    transition: 0.3s ease bottom;
-}
-.nav-bar i {
-    position: relative;
-    left: 40px;
-    transition: 0.3s ease left;
-}
-.nav-bar span {
-    position: absolute;
-    width: 80px;
-    background-color: #0560FE;
-    top: 10px;
-    bottom: 10px;
-    left: 10px;
-    border-radius: 10px;
-    z-index: 1;
-    transition: 0.3s ease left;
-}
-.nav-bar a :hover b{
-    bottom: 0;
-}
-.nav-bar a :hover i{
-    left: -5px;
-}
-.nav-bar:hover span{
-    background: #0560FE;
-}
-.nav-bar a:nth-child(1):hover ~ span{
-    left: 10px;
-}
-.nav-bar a:nth-child(2):hover ~ span{
-    left: 93px;
-}
-.nav-bar a:nth-child(3):hover ~ span{
-    left: 180px;
 }
 .search-box{
     position: absolute;
@@ -120,23 +106,17 @@ body{
     </style>
 </head>
 <body>
-    <div class="nav-bar">
-    <a href="#"><i class="fas fa-th"></i>
-        <b>Showing now</b>
-    </a> 
-    <a href="#">
-        <i class="far fa-bookmark"></i>
-        <b>coming soon</b>
-    </a>
-    <a href="#">
-        <i class="fas fa-id-badge"></i>
-        <b>Watch now</b>
-    </a>
-    <span></span>
-    </div>
-    <div>
-        <h1 style="font-family:Planet Kosmos; font-size:50px;">Fun cinema</h1>
-  </div>
+<!--Navigation-->
+<header><a href="#"class="logo"><i class='bx bx-crown'>
+</i><span style="font-family:planet kosmos ;">Fun</span><span style="font-family:planet kosmos ;">Cinema</span></a>
+<div class="bx bx-menu" id="menu-icon"></div>
+<!-- menu -->
+<ul class="navbar"><li><a href="#home"class="home-active">Home</a></li><li>
+<a href="#movies">Movies</a></li><li>
+<a href="#coming">Coming Soon</a>
+</li><li><a href="#newsletter">Newsletter</a></li></ul>
+<a href="#"class="btn">Sign In</a></header>
+
 <div class="search-box">
     <input type="text" placeholder="Search here..."
     class="search-input"/>
@@ -144,5 +124,6 @@ body{
         <i class="Fas fa-search"></i>
     </a>
 </div>
+
 </body>
 </html>
