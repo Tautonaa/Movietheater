@@ -1,17 +1,20 @@
 <!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <meta charset="utf-8" />
     <title></title>
     <style>
     *{
     margin: 0px;
     padding: 0px;
 }
-.header{
+body{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('pexels-pixabay-33129.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: repeat;
 }
 .container{
     max-width: 1200px;
@@ -87,6 +90,44 @@ button{
     border: 5px solid #fff;
     background: transparent;
 }
+.heading{
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border-bottom: 4px solid var(--main-color);
+}
+.movies-container{
+  max-width: 968px;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, auto)) ;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.box .box-img{
+  width: 100%;
+  height: 270px;
+}
+.box .box-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.box .box-img img:hover{
+  transform: translateY(-15px);
+  transition: 0.8s all linear;
+}
+.box h3{
+  font-size: 0.9rem;
+  font-weight:500;
+ }
+.box span{
+  font-size: 13px;
+} 
         </style>
 </head>
 <body>
@@ -107,25 +148,44 @@ button{
 </div>
 
     <div class="btn-box">
-        <button type="button" class="btn">Explore</button>
-        <button type="button">Signin</button>
-    </div>
-
-</div>
-
-
+       
     </div>
 </div>
+    </div>
+</section>
+<section class="movies-container" id="movies">
+  <h2 class="heding">Showing now</h2>
+  <div class="movie-container"></div>
+    <!--box1-->>
+    <div class="box">
+      <div class="box-img">
+          <img src="free-guy-2021-movie-poster-139x200.jpg" alt="Free guy">
+    </div>
+    <h3>Free guy 2021</h3>
+    <span>120min | Sci-fi/Comedy </span>
+    </div>
+  
 
+  <!--box2-->
+  <div class="box">
+      <div class="box-img">
+          <img src="the-matrix-resurrections-2021-movie-poster-image-304x450.jpg" alt="The Matrix Resurrctions 2021">
+    </div>
+    <h3>The Matrix Resurrctions 2021</h3>
+    <span>120min | Sci-fi </span>
+    </div>
+  </div>
 
+  <!--box2-->
+  <div class="box">
+      <div class="box-img">
+          <img src="don-t-breathe-2-2021-movie-poster-159x200.jpg" alt="Don't Breath2 2021">
+    </div>
+    <h3>Don't Breath2 2021</h3>
+    <span>Don't Breath2 2021 | Horror </span>
+    </div>
+  </div>
 
 </section>
-
-<section>
-<div>
-
-</div>
-</section>
-
 </body>
 </html>
