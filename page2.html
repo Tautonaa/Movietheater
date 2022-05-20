@@ -18,7 +18,7 @@ body{
 }
 .container{
     max-width: 1200px;
-    margin: o auto;
+    margin: 0 auto;
     padding: 0 100px;
 }
 .navbar{
@@ -94,10 +94,10 @@ button{
   max-width: 968px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   font-weight: 500;
   text-transform: uppercase;
-  border-bottom: 4px solid var(--main-color);
+  border-bottom: 1px solid #ff6b3f;
 }
 .movies-container{
   max-width: 968px;
@@ -128,6 +128,97 @@ button{
 .box span{
   font-size: 13px;
 } 
+.cominingsoon-container{
+  display: grid;
+  gap: 1rem;
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+.footer-container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
         </style>
 </head>
 <body>
@@ -153,10 +244,12 @@ button{
 </div>
     </div>
 </section>
+
+<h2 class="heading">Showing now</h2>
 <section class="movies-container" id="movies">
-  <h2 class="heding">Showing now</h2>
-  <div class="movie-container"></div>
-    <!--box1-->>
+ 
+  <div class="movie-container">
+    <!--box1-->
     <div class="box">
       <div class="box-img">
           <img src="free-guy-2021-movie-poster-139x200.jpg" alt="Free guy">
@@ -164,7 +257,7 @@ button{
     <h3>Free guy 2021</h3>
     <span>120min | Sci-fi/Comedy </span>
     </div>
-  
+  </div>
 
   <!--box2-->
   <div class="box">
@@ -176,7 +269,7 @@ button{
     </div>
   </div>
 
-  <!--box2-->
+  <!--box3-->
   <div class="box">
       <div class="box-img">
           <img src="don-t-breathe-2-2021-movie-poster-159x200.jpg" alt="Don't Breath2 2021">
@@ -186,6 +279,125 @@ button{
     </div>
   </div>
 
+<!--box4-->
+  <div class="box">
+      <div class="box-img">
+          <img src="e361fde5bc5ad902b0651b9b910fb6fc.jpg" alt="Big Hero 6">
+    </div>
+    <h3>Big Hero 6</h3>
+    <span>Big Hero 6 | Animation </span>
+    </div>
+  </div>
+
+<!--box5-->
+  <div class="box">
+      <div class="box-img">
+          <img src="f0ebd6d772eaa8221f7b9ab82f4e41a5.jpg" alt="Star Wars">
+    </div>
+    <h3>Star Wars</h3>
+    <span> Star Wars | Sci-fi </span>
+    </div>
+  </div>
+</section><br>
+
+<section class="coming" id="coming"> 
+  <h2 class="heading">Coming Soon</h2>
+
+  <div class="cominingsoon-container"> 
+    <!--box1-->
+    <div class="box">
+      <div class="box-img">
+          <img src="free-guy-2021-movie-poster-139x200.jpg" alt="Free guy">
+    </div>
+    <h3>Free guy 2021</h3>
+    <span>120min | Sci-fi/Comedy </span>
+    </div>
+  </div>
+
+  <!--box2-->
+  <div class="box">
+      <div class="box-img">
+          <img src="the-matrix-resurrections-2021-movie-poster-image-304x450.jpg" alt="The Matrix Resurrctions 2021">
+    </div>
+    <h3>The Matrix Resurrctions 2021</h3>
+    <span>120min | Sci-fi </span>
+    </div>
+  </div>
+
+  <!--box3-->
+  <div class="box">
+      <div class="box-img">
+          <img src="don-t-breathe-2-2021-movie-poster-159x200.jpg" alt="Don't Breath2 2021">
+    </div>
+    <h3>Don't Breath2 2021</h3>
+    <span>Don't Breath2 2021 | Horror </span>
+    </div>
+  </div>
+
+<!--box4-->
+  <div class="box">
+      <div class="box-img">
+          <img src="e361fde5bc5ad902b0651b9b910fb6fc.jpg" alt="Big Hero 6">
+    </div>
+    <h3>Big Hero 6</h3>
+    <span>Big Hero 6 | Animation </span>
+    </div>
+  </div>
+
+<!--box5-->
+  <div class="box">
+      <div class="box-img">
+          <img src="f0ebd6d772eaa8221f7b9ab82f4e41a5.jpg" alt="Star Wars">
+    </div>
+    <h3>Star Wars</h3>
+    <span> Star Wars | Sci-fi </span>
+    </div>
+  </div>
+  </div>
 </section>
+<footer class="footer">
+  <div class="footer-container">
+      <div class="row">
+          <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                  <li><a href="#">about us</a></li>
+                  <li><a href="#">our services</a></li>
+                  <li><a href="#">privacy policy</a></li>
+                  <li><a href="#">affiliate program</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">shipping</a></li>
+                  <li><a href="#">returns</a></li>
+                  <li><a href="#">order status</a></li>
+                  <li><a href="#">payment options</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>online shop</h4>
+              <ul>
+                  <li><a href="#">watch</a></li>
+                  <li><a href="#">bag</a></li>
+                  <li><a href="#">shoes</a></li>
+                  <li><a href="#">dress</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
 </body>
 </html>
